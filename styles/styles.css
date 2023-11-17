@@ -1,0 +1,431 @@
+/* Hace que al añadir margin o padding a los elementos
+no crezcan más allá del borde de su contenedor*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+html{
+    scroll-behavior: smooth;
+    }
+body{
+/* Cambio de estilo de letra*/
+    font-family: 'Roboto', sans-serif;
+/* Quitamos el borde por defecto*/
+    margin: 0;
+    }
+    /* Cambiamos el tamaño de las letras */
+h1{ font-size: 3.5em;}
+h2{ font-size: 2.7em;}
+h3{ font-size: 2em;}
+p{ font-size: 1.25em;}
+    /* Modificamos el estilo de las listas desordenadas
+    quitando los puntos que vienen por defecto*/
+ul{ list-style: none;}
+li{ font-size: 1.25em;}
+button{
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 2px solid rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: white;
+    background-color: rgb(43, 61, 226);
+    }
+button:hover{
+    background-color: rgb(35, 33, 165);
+}
+.container{
+    max-width: 1400px;
+    margin: auto;
+
+}
+.container1{
+    max-width: 1400px;
+    margin: auto;
+}
+
+.color-acento{ color:rgb(43, 61, 226)}
+header{
+    background-color: rgb(245,245,245);
+}
+/* Hasta aquí los esilos generales */
+/* Barra de navegación */
+header .logo{
+    margin:0 ;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: rgb(43, 61, 226);
+    font-size: 1.6em;
+}
+
+header .container1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+    
+}
+
+header a{
+    padding: 5px 12 px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    margin-left: 15px;
+}
+header a:hover{
+    color: rgb(6, 4, 100), 226;
+}
+/* Fin Barra de navegación */
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 80vh;
+    background-image: linear-gradient(
+    0deg,
+    rgb(0, 0, 0, 0.5),
+    rgb(0, 0, 0, 0.5)
+    ),
+    url(/img/dedos.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+#hero h1{
+    color: white;
+}
+#hero button{
+    font-size: 1.75em;
+}
+#Que_es .container{
+    text-align: center;
+    padding: 200px 12 px;
+}
+#historicos{
+    background-color: rgb(30,30,30);
+}
+#historicos .container{
+    padding: 150px 12px;
+    color: white;
+    }
+#historicos h2{
+    margin-top: 0;
+    font-size: 3.2em;
+}
+#historicos p{
+
+}
+#historicos .cursos{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 0px;
+    margin: 30px;
+    border-radius: 15px;
+    color: white;
+}
+.cursos:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgb(0,0,0,0.6),
+        rgb(0,0,0,0.6)
+    )
+    ,url(/img/dali.jpg)
+}
+.cursos:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgb(0,0,0,0.5),
+        rgb(0,0,0,0.5)
+    )
+    ,url(/img/nets.jpg)
+}
+.cursos:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgb(0,0,0,0.5),
+        rgb(0,0,0,0.5)
+    )
+    ,url(/img/libertad.jpg)
+}
+.kwes button a{
+    text-decoration: none;
+    padding: 250px,12px;
+    color:aliceblue;
+}
+#caracteristicas .container{
+    text-align: center;
+    padding: 250px,12px;
+}
+#caracteristicas .li{
+    margin: 16px 0px;
+    font-weight: bold;
+}
+#caracteristicas a{
+    text-decoration: none;
+    color: black;
+    margin-left: 15px;
+}
+#caracteristicas a:hover{
+    color: rgb(35, 33, 165);
+}
+#final{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(30, 30, 30);
+    color: white;
+    height: 80vh;
+}
+#final h2{
+    font-size: 9vw;
+}
+#final button{
+    font-size: 5vm;
+}
+footer{
+    background-color: rgb(230, 230, 230);
+
+}
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: rgb(100, 100, 100);
+}
+footer .container{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+@media (min-width: 850px){
+    header{
+        position:fixed;
+        width: 100%;
+    }
+    header .container1{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 30px;  
+    }
+    #hero h1{
+        font-size: 5em;
+    }
+    #Que_es .container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #Que_es .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #Que_es h2{
+        margin-top: 0px;
+    }
+    #Que_es .img-container{
+        background-image: url(/img/angel.jpg);
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 400px;
+    }
+    #historicos .kwes{
+        display: flex;
+        justify-content: center;
+    }
+    #historicos p{
+        display: block;
+        margin-bottom: 30px;
+    }
+    #historicos h2{
+        font-size: 4em;
+    }
+    #historicos h3{
+        margin-top: 0;
+    }
+    #historicos .cursos{
+        padding: 50px;
+        }
+footer .container{
+    justify-content: flex-end;
+}
+#final h2{font-size: 2em;
+}
+.card1 {
+    display: flex;
+    align-items: center;
+    width: 75vw;
+    height: 300px;
+    padding: 50px 30px 50px 20px;
+    background: #ffff;
+    border-radius: 24px;
+    justify-content: space-around;
+}
+.card1 img{
+    max-width: 280px;
+    width: 29vm;
+    height: 300px;
+    object-fit: cover;
+    margin-left: -60px;
+    margin-right: 30px;
+    border-radius: inherit;
+    box-shadow: 0 60px 40px rgb(0, 0, 0 / 8);
+}
+.card1 h2{
+    color: rgb(43, 61, 226);
+    margin: 10px;
+}
+.card1 h4{
+    color: rgb(0, 0, 0);
+    margin: 10px;
+}
+.card1 p{
+    color: rgb(0, 0, 0);
+    margin: 10px;
+}
+#final button{font-size: 2em;
+    border-radius: 30px;
+}   
+@media (width <= 740px){
+    .card1{
+        flex-direction: column;
+        text-align: center;
+        margin: 0 40px;
+        padding-left: 50px;
+        padding-right: 50px;
+        width: 100%;
+    }
+    .card1 img{
+        margin: -100px 0 30px 0;
+        width: 100%;
+        max-width: 1000px;
+    }
+}
+}
+#cards{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    background-color: rgb(134, 130, 130);
+
+}
+.card{
+    min-width: 200px;
+    margin: 15px 15px;
+    padding: 20px;
+    height: 350px;
+    flex: 1 1 250px;
+    background-color: rgba(255 , 255, 255, 0.12) 40%;
+    border-radius: 12px;
+    position: relative;
+}
+#cards:hover > .card{
+    background: radial-gradient(
+        400px circle at
+        var(--mouse-x) var(--mouse-y),
+        hsl(var(--color)/1),
+        rgba(255,255,255, 0.12) 40%
+    );
+}
+.card-content{
+    position: absolute;
+    inset: 1px;
+    background-color: #131315;
+    border-radius: inherit;
+
+}
+.card:nth-child(1){
+    --color:348 80% 60%;
+}
+.card:nth-child(2){
+    --color:0 0% 100%;
+}
+.card:nth-child(3){
+    --color:220 100% 35%;
+}
+.card::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(
+        500px circle at var(--mouse-x) var(--mouse-y),
+        hsl(var( --color)/ 0.35),
+        transparent 40%
+    );
+    border-radius: inherit;
+    opacity: 0;
+    z-index: 2;
+}
+#cards:hover > .cart::before{
+    opacity: 1;
+}
+.card-content a{
+    all: unset;
+    cursor: pointer;
+}
+.card-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+}
+.card-content  i{
+    font-size: 65px;
+    color: rgba(255, 255, 255, 0.5);
+}
+.card-content p{
+    color: rgba(255, 255, 255, 0.5);
+}
+.card-content a{
+    width: 80%;
+    padding-block: 0.8rem;
+    background-color: rgba(255, 255, 255, 0.05 );
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    z-index: 10;
+}
+.card-content a:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+#logito{
+    font-size: 35px;
+    color: rgba(255, 255, 255, 0.5);
+}
+.card-content span{
+    color: aliceblue;
+}
+.card-content h2{
+    color: aliceblue;
+}
